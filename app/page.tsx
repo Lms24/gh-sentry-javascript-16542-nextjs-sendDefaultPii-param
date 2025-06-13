@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,6 +25,38 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        <div className="bg-black/[.05] dark:bg-white/[.06] px-6 py-4 rounded-lg">
+          <h3 className="font-semibold mb-3 text-center sm:text-left">
+            🚀 Try Dynamic Routes with Language & User ID:
+          </h3>
+          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+            <Link
+              href="/en/user/123"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition-colors"
+            >
+              /en/user/123
+            </Link>
+            <Link
+              href="/fr/user/jane-doe"
+              className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm transition-colors"
+            >
+              /fr/user/jane-doe
+            </Link>
+            <Link
+              href="/es/user/admin"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-sm transition-colors"
+            >
+              /es/user/admin
+            </Link>
+            <Link
+              href="/de/user/maria"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-1 rounded text-sm transition-colors"
+            >
+              /de/user/maria
+            </Link>
+          </div>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
